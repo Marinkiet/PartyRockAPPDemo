@@ -4,7 +4,7 @@ import React from "react";
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      {/* Header */}
+      {/* MainHeader */}
       {/* Subheader */}
       {/* SubjectsCard */}
       {/* Subheader */}
