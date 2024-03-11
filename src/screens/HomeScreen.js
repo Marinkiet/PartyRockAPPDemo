@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import MainHeader from "../components/Headers/MainHeader";
 
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
         <View style={styles.headerWrapper}>
             {/* MainHeader */}
             <MainHeader/>
@@ -18,7 +18,7 @@ const HomeScreen = () => {
              {/* RecentCard */}
         </View>
     
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -27,7 +27,7 @@ export default HomeScreen;
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:'magenta'
+        backgroundColor:'magenta',
       },
       headerWrapper:{
         flex:1,
