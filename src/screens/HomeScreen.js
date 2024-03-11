@@ -1,6 +1,7 @@
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import MainHeader from "../components/Headers/MainHeader";
+import Subheader from "../components/Headers/Subheader";
 
 const HomeScreen = () => {
   return (
@@ -11,6 +12,7 @@ const HomeScreen = () => {
         </View>
         <View style={styles.subjectWrapper}>
             {/* Subheader */}
+            <Subheader/>
             {/* SubjectsCard */}
         </View>
         <View style={styles.ReactCardWrapper}>
