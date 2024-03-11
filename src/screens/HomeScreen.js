@@ -13,11 +13,20 @@ const HomeScreen = () => {
         </View>
         <View style={styles.subjectWrapper}>
             {/* Subheader */}
-            <Subheader/>
-           <ScrollView>
-            <TitleCard/>
-           
+         <View>
+         <Subheader/>
+         </View>
+        <View style={{justifyContent:'center',alignItems:'center'}}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
+            <TitleCard subjectName="Maths" subjectIcon="math-compass"/>
+            <TitleCard subjectName="English" subjectIcon="language-markdown-outline"/> 
+             <TitleCard subjectName="Biology" subjectIcon="dna"/>
+            <TitleCard subjectName="Physics" subjectIcon="atom"/>
+            <TitleCard subjectName="Geography" subjectIcon="map-legend"/>
            </ScrollView>
+        </View>
+       
+           
         </View>
         <View style={styles.ReactCardWrapper}>
              {/* Subheader */}
@@ -41,10 +50,12 @@ const styles = StyleSheet.create({
       },
       subjectWrapper:{
         flex:2,
-        backgroundColor:'pink'
+        backgroundColor:'pink',
+        justifyContent:'center',
       },
       ReactCardWrapper:{
-        flex:3,
+        flex:4,
         backgroundColor:'orange'
-      }
+      },
+    
 });
