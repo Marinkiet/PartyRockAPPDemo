@@ -1,7 +1,8 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import MainHeader from "../components/Headers/MainHeader";
 import Subheader from "../components/Headers/Subheader";
+import TitleCard from "../components/Cards/TitleCard";
 
 const HomeScreen = () => {
   return (
@@ -13,7 +14,10 @@ const HomeScreen = () => {
         <View style={styles.subjectWrapper}>
             {/* Subheader */}
             <Subheader/>
-            {/* SubjectsCard */}
+           <ScrollView>
+            <TitleCard/>
+           
+           </ScrollView>
         </View>
         <View style={styles.ReactCardWrapper}>
              {/* Subheader */}
