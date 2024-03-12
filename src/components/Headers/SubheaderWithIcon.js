@@ -1,5 +1,6 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View,Modal } from "react-native";
 import React from "react";
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 
 const primaryPurple = "#e4d7ff";
@@ -8,16 +9,16 @@ const backgroundGrey="#f1f8fb";
 const primaryOrang="#ffdfaf";
 const secondaryOrange="#f1864c";
 
-const Subheader = (props) => {
+const SubheaderIcon = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.leftText}>{props.text}</Text>
-      <TouchableOpacity ><Text style={styles.rightText}>See All</Text></TouchableOpacity>
+      <TouchableOpacity ><Ionicons name="add" size={25} color={secondaryOrange}/></TouchableOpacity>
     </View>
   );
 };
 
-export default Subheader;
+export default SubheaderIcon;
 
 const styles = StyleSheet.create({
     container:{

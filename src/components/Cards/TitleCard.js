@@ -1,18 +1,24 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-const TitleCard = (props) => {
+const primaryPurple = "#e4d7ff";
+const secondaryPurple="#b698fe";
+const backgroundGrey="#f1f8fb";
+const primaryOrang="#ffdfaf";
+const secondaryOrange="#f1864c";
+
+const TitleCard = (props,{navigation}) => {
    
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('Home')}>
       <View>
-      <MaterialCommunityIcons name={props.subjectIcon} size={35}/>
+      <MaterialCommunityIcons name={props.subjectIcon} size={35} color={primaryPurple}/>
       </View>
       <View  style={styles.subjectTextWrapper}>
         <Text  style={styles.subjectText}>{props.subjectName}</Text>
         </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -22,7 +28,8 @@ const styles = StyleSheet.create({
     container:{
         width:100,
         height:100,
-        backgroundColor:'white',
+        backgroundColor:secondaryPurple,
+        opacity:1,
         borderRadius:20,
         alignItems:'center',
         justifyContent:'center',
@@ -36,12 +43,13 @@ const styles = StyleSheet.create({
     },
     subjectTextWrapper:{
         borderTopWidth:1,
-        borderTopColor:'grey',
+        borderTopColor:primaryOrang,
         borderTopWidth:1,
         marginTop:15
     },
     subjectText:{
         fontSize:16,
-        paddingTop:2
+        paddingTop:2,
+        color:'white'
     }
 });

@@ -1,12 +1,20 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import Ionicons from 'react-native-vector-icons/Ionicons'
+
+const primaryPurple = "#e4d7ff";
+const secondaryPurple="#b698fe";
+const backgroundGrey="#f1f8fb";
+const primaryOrang="#ffdfaf";
+const secondaryOrange="#f1864c";
+
 
 const MainHeader = () => {
     return (
         <View style={styles.container}>
             <View  style={styles.greetingDetails}> 
                 <View  style={styles.greetingIconWrapper}>
-                    <Text  style={styles.greetingIcon}>icon</Text>
+                    <Ionicons  style={styles.greetingIcon} size={25} name="person" color="white"/>
                 </View>
                 <View  style={styles.greetingTextWrapper}>
                     <Text style={styles.greetingText}>Morning, Annie</Text>
@@ -25,7 +33,6 @@ export default MainHeader;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
         flex: 1,
         justifyContent: 'space-between',
         flexDirection: 'row',
@@ -37,7 +44,7 @@ const styles = StyleSheet.create({
         alignItems:'center'
     },
     greetingIconWrapper:{
-        backgroundColor:'blue',
+        backgroundColor: primaryOrang,
         alignItems:'center',
         justifyContent:'center',
         borderRadius:25,
